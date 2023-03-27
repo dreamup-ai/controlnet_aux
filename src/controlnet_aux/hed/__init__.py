@@ -101,7 +101,7 @@ class HEDdetector:
     @classmethod
     def from_pretrained(cls, pretrained_model_or_path, filename=None, cache_dir=None):
         filename = filename or "annotator/ckpts/network-bsds500.pth"
-        model_path = hf_hub_download(pretrained_model_or_path, filename, cache_dir=cache_dir)
+        model_path = os.path.join(pretrained_model_or_path, filename)
 
         netNetwork = Network(model_path)
 
