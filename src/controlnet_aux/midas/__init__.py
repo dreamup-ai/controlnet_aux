@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from PIL import Image
 import torch
-
+import os
 from huggingface_hub import hf_hub_download
 from einops import rearrange
 from .api import MiDaSInference
